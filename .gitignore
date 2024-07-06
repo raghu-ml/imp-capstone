@@ -1,0 +1,15 @@
+tests/__pycache__/__init__.cpython-311.pyc
+.DS_Store
+bayes_opt/__pycache__/__init__.cpython-311.pyc
+bayes_opt/__pycache__/bayesian_optimization.cpython-311.pyc
+bayes_opt/__pycache__/constraint.cpython-311.pyc
+bayes_opt/__pycache__/domain_reduction.cpython-311.pyc
+bayes_opt/__pycache__/event.cpython-311.pyc
+bayes_opt/__pycache__/logger.cpython-311.pyc
+bayes_opt/__pycache__/observer.cpython-311.pyc
+bayes_opt/__pycache__/simple_opt.cpython-311.pyc
+bayes_opt/__pycache__/target_space.cpython-311.pyc
+bayes_opt/__pycache__/util.cpython-311.pyc
+tests/__pycache__/test_Optimize.cpython-311-pytest-7.4.0.pyc
+tests/__pycache__/test_Optimize.cpython-311.pyc
+initial_data/__MACOSX
