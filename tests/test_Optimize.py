@@ -6,8 +6,12 @@ from sklearn.gaussian_process import GaussianProcessRegressor
 import matplotlib.pyplot as plt
 from parameterized import parameterized
 
-PATH = '/Users/raghuramnarayanan/Library/CloudStorage/OneDrive-Personal/STUDY/ML/capstone/initial_data/initial_data'
-NEW_PATH = '/Users/raghuramnarayanan/Library/CloudStorage/OneDrive-Personal/STUDY/ML/capstone/588_data.csv'
+import os
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+PATH = dir_path + '/../initial_data/initial_data'
+NEW_PATH = dir_path + '/../588_data.csv'
 
 from bayes_opt.simple_opt import SimpleBayesOptimizer
 from bayes_opt.util import UtilityFunction
