@@ -30,10 +30,17 @@ Firstly for optimization i copied the code from https://github.com/bayesian-opti
 
 From here we only take the `bayes_opt/util.py` package. This package contain implementation of Upper Confidence bound, Expected improvement and Probability of Improvement.
 
-I reviewed the implementation with these references: h
+I reviewed the implementation with these references: 
 * https://www.cs.ox.ac.uk/people/nando.defreitas/publications/BayesOptLoop.pdf
 * https://medium.com/@okanyenigun/step-by-step-guide-to-bayesian-optimization-a-python-based-approach-3558985c6818
 
-  
+This package also contains a function `acq_max` which can maximise the acquisition fucnction for the given Gaussian process. This randomly samples the the function `n_warmup` times and then uses the scipy optimize package with `n_iter` random seeds. We take the best guess.
+
+Finally we put all of this together, for each function (1 to 8), we create a Gaussian process regressor with the following parameters:
+* Covariance kernel - with kernel parameters
+* Acquisition function - ucb, poi, ei
+* bounds - focus the search for suggestion within these bounds - useful when we want exploit in a certain area.
+
+
 
 
