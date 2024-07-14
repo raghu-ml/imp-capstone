@@ -47,6 +47,9 @@ I started with the approach of running the optimization for each function using 
 
 After a few more observations (as we got close to sumbission, with 2 submissions per week), i removed the exploration paramteter prefering exploitation.
 
-I also set the search bounds on function 1 to `[[0.77,0.8],[0.64,0.75]]` as i felt the suggestions were outside the range where I had observed the maxiumum values.
+I also set the search bounds on function 1 to `[[0.77,0.8],[0.64,0.75]]` as i felt the suggestions were outside the range where I had observed the maximum values.
+
+I also explored different kernels and did not notice any differene in the suggestions and decided to stick with the default Marten kernel.
+
 
 
