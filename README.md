@@ -22,7 +22,6 @@ Below is an example of the the rest run looks like. The red box outlines the sug
 
 
 ## Approach and Code structure
-My approach this capstone was a simple one.
 
 My aim was to implement the `sklearn.GaussianProcessRegressor` as we did the lecture notes. Infact, I copy that implementation as is. However, given that there are 8 functions to optimize, I wanted an implementation that could be easily customized, specifically, I wanted to be able to try different covariance kernels and acquisition functions. I also wanted parameters to control exploration vs exploitation and finally I wanted to optimize the acquisition functions by not just a random state space search. Instead i wanted to employ some optimization technique.
 
@@ -38,9 +37,16 @@ This package also contains a function `acq_max` which can maximise the acquisiti
 
 Finally we put all of this together, for each function (1 to 8), we create a Gaussian process regressor with the following parameters:
 * Covariance kernel - with kernel parameters
-* Acquisition function - ucb, poi, ei
+* Acquisition function - ucb (upper confidence bound), poi (probability of improvement), ei (expected imorovement)
 * bounds - focus the search for suggestion within these bounds - useful when we want exploit in a certain area.
 
 
+### The approach
+
+I started with the approach of running the optimization for each function using the UCB method with a kappa of 2 to force a high degree if exploration. The default kernel was the Marten kernel. I noticed that there were convergence issues for function 1 and 5. I experimented with different kernels and settled on the radial basis kernel. After a few weeks of using ucb I moved to poi method and still keeping the exploration parameter positive. I set different exploration parameters for different functions, prefering the higher values for the higher dimensional functions. Expected improvement acquisition seemed to get stuck in optimization phase, collapsing to previously seen values.
+
+After a few more observations (as we got close to sumbission, with 2 submissions per week), i removed the exploration paramteter prefering exploitation.
+
+I also set the search bounds on function 1 to `[[0.77,0.8],[0.64,0.75]]` as i felt the suggestions were outside the range where I had observed the maxiumum values.
 
 
