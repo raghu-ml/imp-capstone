@@ -51,5 +51,5 @@ I also set the search bounds on function 1 to `[[0.77,0.8],[0.64,0.75]]` as i fe
 
 I also explored different kernels and did not notice any differene in the suggestions and decided to stick with the default Marten kernel.
 
-
+I feel like I have increased the number of iterations of the optimizer at the end, to maximize the exploitation, we went from 10 to 1000.
 
