@@ -54,6 +54,6 @@ I also explored different kernels and did not notice any differene in the sugges
 I feel like I have increased the number of iterations of the optimizer at the end, to maximize the exploitation, we went from 10 to 1000.
 
 
-### Approach and careeer
+### Approach and career
 
 Like in any problem solving situation, I rely on existing implementation to build the solution to my problem. There are no other clear links between my career goals and this project.
