@@ -57,3 +57,9 @@ I feel like I have increased the number of iterations of the optimizer at the en
 ### Approach and career
 
 Like in any problem solving situation, I rely on existing implementation to build the solution to my problem. There are no other clear links between my career goals and this project.
+
+### What would I do differently
+I would have read some research paper, implemented methods such as ``turbo`` or ``pysot`` etc and used libraries such as ``BoTorch``.
+
+I would have tired strategies to parallelize the search.
+
